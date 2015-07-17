@@ -15,7 +15,8 @@
         files.exclude("node_modules");
 
         var options = nodeLintOptions();
-        lint.validateFileList(files.toArray(), options, {});
+        var passed = lint.validateFileList(files.toArray(), options, {}) ;
+        if (!passed) fail("Lint failed");
     });
 
     desc("Integrate");
@@ -25,6 +26,7 @@
         console.log("   a. Walk iver Integration box.");
         console.log("   b. git pull.");
         console.log("   c. 'jake'.");
+        console.log("   d. if jake fail stop! try again after fixing the issue.");
         console.log("3. 'git checkout integration'");
         console.log("4. 'git merge master --no-ff --log'");
         console.log("5. 'git checkout master'");
