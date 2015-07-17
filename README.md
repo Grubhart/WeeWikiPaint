@@ -1,7 +1,7 @@
 # WeeWikiPaint
 repositorio para aplicar lo aprendido en la web let's code javascript
 
-
+-install node.js
 to build we are Using differents libraries to build, lint, etc from this folder use: 
 
 npm intall jake 
